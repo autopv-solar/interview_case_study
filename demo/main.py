@@ -71,7 +71,7 @@ def send_discount_message():
                 server = smtplib.SMTP("smtp.gmail.com", 587)
                 server.starttls()
                 server.login(environ.get("email"), environ.get("pwd"))
-                server.sendmail(sender, "paul.nel@pm.me", message,)
+                server.sendmail(sender, "email_goes_here", message,)
 
                 print(f"The following message was successfully emailed from {sender} to "
                       f"{customers.loc[i, 'customer_email']}:\n\n{message}\n\n")
